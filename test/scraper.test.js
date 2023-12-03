@@ -50,7 +50,7 @@ describe("scraper", () => {
     </div>
     </body>
     </html>`;
-    const result = await scraper.getHtml("https://example.com");
+    const result = await scraper.get("https://example.com").data;
     expect(result.replace(/\s/g, "")).toEqual(html.replace(/\s/g, ""));
   });
 });

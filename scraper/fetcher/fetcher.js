@@ -16,15 +16,13 @@ function wait(ms) {
     });
 }
 
-export const get = (axiosInstance, url, maxRetries = 5) => __awaiter(void 0, void 0, void 0, function* () {
+export const getRequest = (axiosInstance, url, maxRetries = 5) => __awaiter(void 0, void 0, void 0, function* () {
     let retries = 0;
     // We try to fetch the data and implement a retry strategy for rate limiting
     while (retries < maxRetries) {
         try {
             const response = yield axiosInstance.get(url);
-            const html = response.data;
-            // We return if the request was successful
-            return html;
+            return response;
         }
         catch (error) {
             // if we get limited let's retry
@@ -43,8 +41,8 @@ export const get = (axiosInstance, url, maxRetries = 5) => __awaiter(void 0, voi
     throw new Error(`Max retries (${maxRetries}) exceeded!`);
 });
 // This is our function that fetches the HTML, it implements delay
-export const fetchWithRetryAndDelay = (url, client, delay) => __awaiter(void 0, void 0, void 0, function* () {
+export const getWithRetryAndDelay = (url, client, delay) => __awaiter(void 0, void 0, void 0, function* () {
     yield new Promise((resolve) => setTimeout(resolve, delay));
-    const html = yield get(client, url);
+    const html = yield getRequest(client, url);
     return html;
 });

@@ -15,9 +15,11 @@ import scraper from "scrapou";
 // this will make a request to https://www.somesite.com
 try {
   // Scraping base url
-  const html = await scraper.getHTML("");
-  // injecting paths or queries
-  const html = await scraper.getHTML("posts?author=me");
+  const answer await scraper.get("");
+  // it returns an AxiosResponse
+  const html  = answer.data
+  // You can inject paths or queries
+  await scraper.get("posts?author=me");
   // GET https://www.somesite.com/posts?author=me
 } catch (error) {
   throw error;
