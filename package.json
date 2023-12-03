@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple scraper with retry and proxy/user-agents config",
   "main": "index.js",
+  "type": "module",
   "author": "Maxence Robinet",
   "repository": "https://github.com/saint-james-fr/scrapou",
   "license": "MIT",

@@ -1,5 +1,5 @@
-var _a;
 import dotenv from "dotenv";
+var _a;
 dotenv.config();
 export const scraperConfig = {
     baseURL: String(process.env.SCRAPING_BASE_URL),
