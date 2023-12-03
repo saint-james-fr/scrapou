@@ -12,13 +12,13 @@ SCRAPING_BASE_URL = "https://www.somesite.com";
 // yourfile.js
 import scraper from "scrapou";
 
-url = "some-page-i-wanna-scrap";
-// this will make a request to https://www.somesite.com/some-page-i-wanna-scrap
+// this will make a request to https://www.somesite.com
 try {
   // Scraping base url
   const html = await scraper.getHTML("");
   // injecting paths or queries
   const html = await scraper.getHTML("posts?author=me");
+  // GET https://www.somesite.com/posts?author=me
 } catch (error) {
   throw error;
 }
