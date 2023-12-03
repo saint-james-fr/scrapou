@@ -4,6 +4,7 @@
   "description": "A simple scraper with retry and proxy configurations",
   "main": "index.js",
   "author": "Maxence Robinet",
+  "repository": "https://github.com/saint-james-fr/scrapou",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.6.2",
