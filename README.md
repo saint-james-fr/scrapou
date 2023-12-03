@@ -15,7 +15,7 @@ import scraper from "scrapou";
 // this will make a request to https://www.somesite.com
 try {
   // Scraping base url
-  const answer await scraper.get("");
+  const answer = await scraper.get("");
   // it returns an AxiosResponse
   const html  = answer.data
   // You can inject paths or queries
