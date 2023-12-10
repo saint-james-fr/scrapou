@@ -1,6 +1,6 @@
 {
   "name": "scrapou",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple scraper with retry and proxy/user-agents config",
   "main": "index.js",
   "type": "module",
