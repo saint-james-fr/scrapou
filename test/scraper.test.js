@@ -1,6 +1,6 @@
 import scraper from "../index";
 
-process.env.SCRAPIN_BASE_URL = "https://example.com";
+process.env.SCRAPING_BASE_URL = "https://example.com";
 
 describe("scraper", () => {
   it("should return the correct HTML from https://example.com", async () => {
@@ -50,7 +50,7 @@ describe("scraper", () => {
     </div>
     </body>
     </html>`;
-    const result = await scraper.get("https://example.com").data;
-    expect(result.replace(/\s/g, "")).toEqual(html.replace(/\s/g, ""));
+    const result = await scraper.get("https://example.com");
+    expect(result.data.replace(/\s/g, "")).toEqual(html.replace(/\s/g, ""));
   });
 });
